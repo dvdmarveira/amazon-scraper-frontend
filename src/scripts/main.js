@@ -29,16 +29,16 @@ scrapeButton.addEventListener("click", async () => {
 function displayProducts(products) {
   resultsDiv.innerHTML = "";
 
-  // Verifica se a lista de produtos está vazia
+  // Check if the product list is empty
   if (products.length === 0) {
     resultsDiv.innerHTML = "<p>No products found for the given keyword.</p>";
     return;
   }
 
   products.forEach((product) => {
-    // Verifica se o produto tem dados válidos
+    // Checks if the product has valid data
     if (!product.title || !product.imageUrl) {
-      return; // Ignora produtos com dados ausentes
+      return; // Ignore products with missing data
     }
 
     const productElement = document.createElement("div");
